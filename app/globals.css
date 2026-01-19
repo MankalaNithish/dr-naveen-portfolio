@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,7 +24,24 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-[#F6EFE6] text-neutral-800;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out both;
 }
