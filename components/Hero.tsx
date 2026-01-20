@@ -1,14 +1,28 @@
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/lib/client";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
 
 const builder = imageUrlBuilder(client);
 
-function urlFor(source: any) {
+function urlFor(source: SanityImageSource) {
   return builder.image(source);
 }
 
-export default function Hero({ profile }: { profile: any }) {
+type Profile = {
+  name: string;
+  headline?: string;
+  heroImage?: SanityImageSource & {
+    asset?: {
+      metadata?: {
+        lqip?: string;
+      };
+    };
+  };
+};
+
+export default function Hero({ profile }: { profile: Profile | null }) {
   if (!profile) return null;
 
   return (
