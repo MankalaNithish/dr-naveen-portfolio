@@ -7,8 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'Dr Naveen Portfolio',
 
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID!,
-  dataset: process.env.SANITY_STUDIO_DATASET!,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
 
   plugins: [
     deskTool(),
