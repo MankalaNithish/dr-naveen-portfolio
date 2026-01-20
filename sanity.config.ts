@@ -10,6 +10,8 @@ export default defineConfig({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
 
+  basePath: "/studio", // ✅ REQUIRED for Next.js app router
+
   plugins: [
     deskTool(),
     visionTool(),
