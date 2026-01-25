@@ -10,6 +10,8 @@ export const metadata = {
   title: "Home",
 };
 
+export const revalidate = 60;
+
 export default async function Home() {
   const [ngoRoles, profile, insights] = await Promise.all([
     client.fetch(ngoRolesQuery),

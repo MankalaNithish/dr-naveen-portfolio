@@ -4,6 +4,8 @@ export const metadata = {
   title: "Insights",
 };
 
+export const revalidate = 60;
+
 export default function InsightsPage() {
   return (
     <section className="px-6 md:px-12 py-24">

@@ -8,6 +8,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+export const revalidate = 60;
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {
