@@ -1,11 +1,14 @@
 import { groq } from 'next-sanity'
 
 export const ngoRolesQuery = groq`
-  *[_type == "ngoRole"] | order(_createdAt desc) {
+  *[_type == "ngoRole"] | order(organization asc) {
     _id,
     organization,
-    role,
-    duration
+    positions[] | order(fromYear desc) {
+      roleName,
+      fromYear,
+      toYear
+    }
   }
 `
 export const profileQuery = `
