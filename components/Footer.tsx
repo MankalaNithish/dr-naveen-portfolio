@@ -51,7 +51,7 @@ export default function Footer() {
           <h3 className="font-sans font-semibold text-sm uppercase tracking-wider mb-4 text-neutral-900">Follow Me</h3>
           <div className="flex gap-4">
             <Link
-              href="https://wa.me/91944077741"
+              href="https://wa.me/919440777741"
               target="_blank"
               className="p-2 rounded-full border border-neutral-200 text-neutral-600 hover:text-green-600 hover:border-green-600 transition"
               aria-label="WhatsApp"
@@ -67,7 +67,7 @@ export default function Footer() {
               <Instagram className="w-5 h-5" />
             </Link>
             <Link
-              href="https://facebook.com/galaxmi.naveen"
+              href="https://facebook.com/gajalaxmi.naveen"
               target="_blank"
               className="p-2 rounded-full border border-neutral-200 text-neutral-600 hover:text-blue-600 hover:border-blue-600 transition"
               aria-label="Facebook"
