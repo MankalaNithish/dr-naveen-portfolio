@@ -7,7 +7,7 @@ type NGORole = {
 
 export default function NgoSection({ roles }: { roles: NGORole[] }) {
   return (
-    <section id="ngos" className="px-6 md:px-12 py-24 bg-white">
+    <section id="ngos" className="px-6 md:px-12 py-24 bg-stone-50 border-y border-stone-200/50">
       <h2 className="text-3xl font-serif mb-10">NGO Involvement</h2>
 
       <div className="grid md:grid-cols-2 gap-6">

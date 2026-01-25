@@ -20,7 +20,9 @@ export const profileQuery = `
         metadata {
           lqip
         }
-      }
+      },
+      hotspot,
+      crop
     }
   }
 `;

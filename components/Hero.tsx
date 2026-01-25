@@ -19,6 +19,18 @@ type Profile = {
         lqip?: string;
       };
     };
+    hotspot?: {
+      x: number;
+      y: number;
+      height: number;
+      width: number;
+    };
+    crop?: {
+      top: number;
+      bottom: number;
+      left: number;
+      right: number;
+    };
   };
 };
 
@@ -38,13 +50,13 @@ export default function Hero({ profile }: { profile: Profile | null }) {
 
       {profile.heroImage && (
         <Image
-          src={urlFor(profile.heroImage).width(600).height(400).url()}
+          src={urlFor(profile.heroImage).width(800).height(1000).url()}
           alt={profile.name}
           width={600}
-          height={400}
+          height={750}
           placeholder={profile.heroImage?.asset?.metadata?.lqip ? "blur" : "empty"}
           blurDataURL={profile.heroImage?.asset?.metadata?.lqip}
-          className="rounded-2xl shadow-sm"
+          className="rounded-2xl shadow-sm object-cover w-full aspect-[4/5]"
         />
       )}
     </section>

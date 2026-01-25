@@ -8,6 +8,7 @@ export default function Navbar() {
         <Link className="hover:text-neutral-900 transition" href="/#about">About</Link>
         <Link className="hover:text-neutral-900 transition" href="/#ngos">NGOs</Link>
         <Link className="hover:text-neutral-900 transition" href="/#insights">Insights</Link>
+        <Link className="hover:text-neutral-900 transition" href="/#contact">Contact</Link>
       </div>
     </nav>
   );
